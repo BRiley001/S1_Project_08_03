@@ -17,8 +17,16 @@
 
 /* Column Styles */
 
+/* the article will split into multiple columns of width 260, with a 20px gap, a line between them that is red, and only 2 widoes or orphans allowed (words that appear at the end that may not look nice) */
 article {
     column-width: 260px;
     column-gap: 20px;
+    column-rule: 1px solid rgb(154, 64, 31);
+    widows: 2;
+    orphans: 2;
+}
 
+/* any h1s within the article span across the page */
+article h1 {
+    column-span: all;
 }

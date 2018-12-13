@@ -72,12 +72,16 @@
             your table in advance.
         </p>
     </article>
+    <!-- The table element creates a table, which in this case will be used to create a calendar -->
     <table id="calendar">
+        <!-- A caption is extra text on the top or bottom of the text -->
         <caption>February 2018 Calendar</caption>
+        <!-- the colgroup allows for the selection of groups of columns, which allow them to be selected without the need for IDs and classes -->
         <colgroup>
             <col class="weekdays" span="5">
             <col class="weekends" span="2">
         </colgroup>
+        <!-- the thead appears at the top of the table, and contains the week days -->
         <thead>
             <tr>
                 <th>Sun</th>
@@ -89,6 +93,7 @@
                 <th>Sat</th>
             </tr>
         </thead>
+        <!-- The tbody contains each day's day, event, time, and price. The table data cells have a data attribute so they can be selected later -->
         <tbody>
             <tr>
                 <td data-date="Sun, Jan 28, 2018">

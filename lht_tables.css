@@ -19,6 +19,7 @@
 */
 @media only screen and (max-width: 640px) {
 
+    /* All of the selectors will take up the entire line they are on */
     table,
     tbody,
     tr,
@@ -28,17 +29,20 @@
         display: block;
     }
 
-    thead h1 {
+    /* the table rows inside of the thead will not appear */
+    thead tr {
         display: none;
     }
 
+    /* The caption will have a gray backgorund, white text, with small typography changes */
     caption {
         color: white;
-        background: medium gray;
+        background-color: gray;
         font-size: 1.5em;
         line-height: 2em;
     }
 
+    /* The data cells have dotted gray backgrounds, blue text, a relative position and has small changes to its size and position */
     td {
         border: 1px dotted gray;
         color: rgb(11, 12, 145);
@@ -47,11 +51,13 @@
         min-height: 40px;
     }
 
+    /* every odd number of table rows will have a yellowish background, with a gray border */
     tr:nth-of-type(odd) {
         background: rgb(255, 235, 178);
         border: 2px solid gray;
     }
 
+    /* Every data cell with a data-date attribute has absolute positioning, will be in the top left, with some size and spacing adjustments. */
     td::before {
         content: attr(data-date);
         position: absolute;
@@ -68,6 +74,8 @@
 */
 
 @media only screen and (min-width: 641px) {
+
+    /* the table will have the selected background that takes up 40% of the space, and will not tile, in the bottom right. The table will have a red border, with all borders beig collapsed. the margins will center it, and the layout is fixed,and take up. */
     table {
         background: url(lht_photo1.png) no-repeat 40%;
         background-position: bottom right;
@@ -78,27 +86,31 @@
         width: 85%;
     }
 
+    /* header and data cells have a gray border, a smaller font size, normal weight, some padding, be at the top, take up 1/7 of the space, and breaks words */
     th,
     td {
         border: 1px solid gray;
         font-size: .85em;
         font-weight: normal;
         padding: 5px;
-        text-align: center top;
+        vertical-align: top;
         width: 14.28%;
-        word-wrap: wrap;
+        word-wrap: break-word;
     }
 
+    /* data cells have a gray background and blue text. */
     td {
         background: rgba(171, 171, 171, 0.6);
         color: rgb(11, 12, 145);
     }
 
+    /* Any data cell with a data-date attribute that has "Feb" anywhere in it will be yellowish, with a box shadow that goes inward*/
     td[data-date*="Feb"] {
         background: rgba(232, 214, 148, 0.6);
         box-shadow: inset gray 0 0 20px;
     }
 
+    /* The caption will be at the top, in the center, offset from the bottom, with typography changes. */
     caption {
         vertical-align: top;
         text-align: center;
@@ -107,6 +119,7 @@
         letter-spacing: 3px;
     }
 
+    /* any header cells within the thead will have a red-ish background. */
     thead th {
         background: rgb(154, 64, 3);
     }
